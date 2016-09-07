@@ -1,0 +1,86 @@
+/*
+  Name: Sidebar
+  Description: ...
+*/
+
+.sidebar {
+  //testing background: lighten(blue, 45%);
+  background: #F9F9F9;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+  margin-bottom: 0;
+  border-top: 1px solid #CCC;
+}
+
+.widget {
+  border-top: 0px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  &:first-child {
+    padding-top: 0px;
+  }
+  .widget-title {
+    margin-bottom: .45em;
+    text-align: center;
+    font-family: $theme-font-base;
+    color: $theme-type-1;
+  }
+}
+
+.widget_text {
+  .textwidget {
+    color: $theme-type-2;
+    text-align: center;
+  }
+}
+
+#text-2 .textwidget {
+  text-align: justify;
+}
+
+
+// Media queries
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+/* 14.1 - >= 710px */
+@media screen and (min-width: 44.375em) {
+
+}
+/* 14.2 - >= 783px */
+@media screen and (min-width: 48.9375em) {
+
+}
+/* 14.3 - >= 910px */
+@media screen and (min-width: 56.875em) {
+  .sidebar {
+    //testing background: lighten(blue, 45%);
+    background: #fff;
+    padding-top: 0;
+    margin-bottom: 5.25em;
+    border-top-width: 0;
+  }
+  .widget {
+    margin-bottom: 1.5em;
+    font-size: 1rem;
+    font-size: 16px;
+    .widget-title {
+      font-size: .875rem;
+      font-size: 14px;
+    }
+  }
+}
+/* 14.4 - >= 985px */
+@media screen and (min-width: 61.5625em) {
+
+}
+/* 14.5 - >= 1200px */
+@media screen and (min-width: 75em) {
+
+}

@@ -1,0 +1,21 @@
+wordpress:
+  container_name: wordpress
+  image: wordpress:4.3.0-apache
+  volumes:
+    - /Users/okla/code/thiscolourfullife/html/blog:/var/www/html
+  links:
+    - db:mysql
+  ports:
+    - 80:80
+  env_file: .env.wordpress
+db:
+  image: mariadb:5.5
+  container_name: mysql
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: V4ukwZ0LxlOD0od5tnYlzFeP4lyTAIHQmlyHH1zdKeUatJJef4
+sass:
+  image: larryprice/sass
+  volumes:
+    - ./html/blog/wp-content/themes/tcl:/src
