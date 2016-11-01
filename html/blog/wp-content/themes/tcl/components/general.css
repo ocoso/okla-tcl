@@ -15,7 +15,15 @@ textarea {
   -webkit-font-smoothing: antialiased;
   font-size: 16.4px;
   font-size: 1.15rem;
-  line-height: 1.75; }
+  line-height: 1.75;
+  transition: font-size 0.5s ease;
+  -webkit-transition: font-size 0.5s ease;
+  -moz-transition: font-size 0.5s ease;
+  -o-transition: font-size 0.5s ease;
+  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease; }
 
 h1,
 h2,
@@ -35,6 +43,12 @@ h6 {
 
 p {
   margin: 0 0 1.75em; }
+
+.entry-content p {
+  font-size: 1.15rem; }
+
+.entry-content > p {
+  font-size: 1.375rem; }
 
 dfn,
 cite,
@@ -141,7 +155,8 @@ big {
 a {
   color: #4D3C2B;
   text-decoration: none;
-  box-shadow: none; }
+  box-shadow: none;
+  outline: 0; }
 
 a:hover,
 a:focus,
@@ -182,12 +197,65 @@ a:active {
 .textwidget a:focus {
   box-shadow: none; }
 
+.entry-title a:hover, .entry-title a:focus {
+  color: #8e6f50; }
+
 @media screen and (min-width: 44.375em) {
   body:not(.custom-background-image):before, body:not(.custom-background-image):after {
     height: 0px !important; }
 
   .site {
     margin: 0px; } }
+/**
+ * Custom Forms
+ */
+.form-subscribe .subscribe-block .subscribe-input {
+  float: left;
+  width: 100%; }
+  .form-subscribe .subscribe-block .subscribe-input input.form-control {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 1em;
+    padding-top: 5px;
+    color: #4D3C2B;
+    font-family: "GillSans";
+    font-size: 1rem;
+    background: #FFF;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #c6c6c6; }
+    .form-subscribe .subscribe-block .subscribe-input input.form-control::-webkit-input-placeholder {
+      color: #a2a2a2;
+      font-size: 0.875rem; }
+    .form-subscribe .subscribe-block .subscribe-input input.form-control:hover, .form-subscribe .subscribe-block .subscribe-input input.form-control:active, .form-subscribe .subscribe-block .subscribe-input input.form-control:focus {
+      background: #FFF;
+      border-color: #4D3C2B;
+      box-shadow: none; }
+      .form-subscribe .subscribe-block .subscribe-input input.form-control:hover::-webkit-input-placeholder, .form-subscribe .subscribe-block .subscribe-input input.form-control:active::-webkit-input-placeholder, .form-subscribe .subscribe-block .subscribe-input input.form-control:focus::-webkit-input-placeholder {
+        color: #6f6f6f; }
+.form-subscribe .subscribe-block .subscribe-btn {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+  margin-left: -50px !important;
+  padding-top: .75em;
+  color: #c6c6c6;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid #c6c6c6;
+  float: left; }
+  .form-subscribe .subscribe-block .subscribe-btn:hover {
+    background-color: #FFF;
+    border-color: #4D3C2B;
+    color: #4D3C2B; }
+  .form-subscribe .subscribe-block .subscribe-btn:active, .form-subscribe .subscribe-block .subscribe-btn:focus {
+    background-color: #FFF;
+    border-color: #4D3C2B;
+    color: #4D3C2B; }
+  .form-subscribe .subscribe-block .subscribe-btn:before {
+    font-size: 1.15rem; }
+
 /**
  * 11.6 - Footer
  */

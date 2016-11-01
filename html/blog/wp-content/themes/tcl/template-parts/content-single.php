@@ -9,13 +9,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php twentysixteen_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
+	<div class="meta">
+		<h3 class="author">by <?php the_author(); ?></h3>
+		<span class="date"><?php the_date(d-m-y); ?> in</span> <span class="category"><?php the_category(); ?></span>
+	</div>
 	<?php twentysixteen_excerpt(); ?>
 
-	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -35,29 +38,11 @@
 			}
 		?>
 	</div><!-- .entry-content -->
-	<div class="footer-break">
-		&nbsp;
-	</div>
-	<h2 class="footer-title">Share &amp; inspire others!</h2>
-	<div class="footer-share">
-		<?php echo do_shortcode("[shareaholic app='share_buttons' id='25641310']"); ?>
-	</div>
-	<h2 class="footer-title">You may also like the following articles</h2>
-	<div class="footer-recommend">
-		<?php echo do_shortcode("[shareaholic app='recommendations' id='25641318']"); ?>
-	</div>
-	<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+	<footer class="meta">
+		<p class="footer-meta">Published <?php the_time('jS F Y') ?> and categorised in <?php the_category(', ') ?></h2>
+		<h2 class="footer-title">Share &amp; inspire others</h2>
+		<div class="footer-share"><?php echo do_shortcode("[shareaholic app='share_buttons' id='25641310']"); ?></div>
+		<h2 class="footer-title">You may also like to read</h2>
+		<div class="footer-recommend"><?php echo do_shortcode("[shareaholic app='recommendations' id='25641318']"); ?></div>
+	</footer>
 </article><!-- #post-## -->

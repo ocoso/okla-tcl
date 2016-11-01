@@ -12,7 +12,7 @@
 }
 
 .a11y-toolbar {
-	top: 20%;
+	top: 18%;
 }
 
 .a11y-toolbar button {
@@ -23,7 +23,25 @@
 	background: #fff;
 	border-top: none;
 	border-bottom: none;
+	padding: 0.2em;
+	outline: 0;
 }
+
+.a11y-toolbar ul li button.active {
+	padding: 0.1em;
+}
+
+.a11y-toolbar ul li:last-child button {
+	border-radius: 0px 8px 8px 0px!important;
+}
+
+.a11y-toolbar button.active {
+  color: #fff !important;
+	background: #a1a1a1 !important;
+  border-radius: 0px 8px 8px 0px!important;
+	border-bottom: none !important;
+}
+
 .a11y-toolbar-list {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -54,11 +72,142 @@
 	Shareaholic
 */
 
+.shareaholic-share-buttons-container.floated {
+	display: none;
+}
+
 .shareaholic-share-buttons-container.floated.mobile ul.shareaholic-share-buttons {
 	position: fixed;
 	bottom: 0px;
 }
 
+.shareaholic-recommendations-container .shareaholic-recommendations .shareaholic-recommendation .recommendation-article-link .recommendation-article-title {
+	text-align: center!important;
+}
+
+// Ajax Load More
+.alm-reveal {
+	padding-top: 0em;
+}
+.alm-reveal, .alm-btn-wrap {
+	clear: both;
+}
+
+button.alm-load-more-btn {
+	font-family: $theme-font-base;
+	background: $theme-3;
+	border-radius: 0px;
+	outline: 0;
+	&:hover {
+		background: darken($theme-3, 10%);
+	}
+	&.done {
+		background: lighten($theme-3, 7.5%);
+	}
+}
+
+.alm-listing li {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.alm-listing li img {
+	position: relative;
+	width: 100%;
+	border-radius: 0;
+}
+
+ul.post-categories {
+	margin-left: 0;
+}
+
+.feature-alm {
+  display: block;
+  margin-bottom: 2em;
+	&:before, &:after {
+		clear: both;
+	}
+  .feature-content {
+    padding: 0 .25em;
+  }
+  .title {
+    padding-top: 0.75em;
+    font-weight: normal;
+    font-size: $theme-type-size-base;
+    text-align: center;
+    text-transform: uppercase;
+    min-height: none;
+    max-height: none;
+    margin-bottom: 0em;
+    a {
+      color: $theme-type-1;
+      &:active, &:link, &:focus, &:visited { color: $theme-type-1; }
+      &:hover {
+        color: $theme-type-2;
+      }
+    }
+  }
+  .excerpt {
+    font-size: $theme-type-size-m1;
+    display: block;
+    line-height: 1.5;
+    text-align: center;
+    color: $theme-type-2;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .category {
+    display: none;
+    font-size: $theme-type-size-m2;
+    & ul > li {
+      display: inline;
+      list-style: none;
+      a {
+        color: $theme-type-3;
+        &:visited, &:active, &:link, &:focus { color: $theme-type-3; }
+        &:hover {
+          color: $theme-type-2;
+        }
+      }
+      &::after {
+        content: "/";
+        color: $theme-type-3;
+        font-weight: bold;
+        padding-left: 0.25em;
+      }
+      &:last-child::after {
+        content: "";
+        padding-left: 0;
+      }
+    }
+  }
+  .feature-image {
+    a {
+      display: block;
+    }
+  }
+  // Second feature
+  &:nth-child(2) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &:nth-child(2), &:nth-child(3) {
+    margin-top: 1em;
+    .feature-content {
+      .title {
+      }
+      .excerpt {
+        font-size: $theme-type-size-base;
+        line-height: 1.5;
+      }
+    }
+  }
+} // end feature
 
 /* 14.1 - >= 710px */
 @media screen and (min-width: 44.375em) {
@@ -66,7 +215,60 @@
 }
 /* 14.2 - >= 783px */
 @media screen and (min-width: 48.9375em) {
-
+	.shareaholic-share-buttons-container.floated {
+		display: block;
+	}
+	.alm-listing li {
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+	.feature-alm {
+    // Define default features
+    float: left;
+    width: 33.333%;
+    display: block;
+    margin-bottom: 0em;
+    .feature-content {
+      padding: 0;
+    }
+    .title {
+      text-align: left;
+      margin-bottom: 1em;
+      min-height: 3.25rem;
+      max-height: none;
+    }
+    .excerpt {
+      text-align: left;
+      p {
+        margin-bottom: 1em;
+      }
+    }
+    .category {
+      display: block;
+    }
+    // First column
+    &:nth-child(3n+1) {
+      padding-right: 0.75em;
+    }
+    // Second column
+    &:nth-child(3n+2) {
+      padding-left: 0.375em;
+      padding-right: 0.375em;
+    }
+    // Third column
+    &:nth-child(3n+3) {
+      padding-left: 0.75em;
+    }
+    &:nth-child(0n+7) {
+      clear: both;
+    }
+		&:nth-child(2), &:nth-child(3) {
+			margin-top: 0;
+		}
+    &:after {
+      clear: both;
+    }
+  }
 }
 /* 14.3 - >= 910px */
 @media screen and (min-width: 56.875em) {

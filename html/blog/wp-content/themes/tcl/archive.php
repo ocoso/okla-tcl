@@ -20,11 +20,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			
+
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php echo str_replace('Category: ','Read ',get_the_archive_title()); ?></h1>
+				<h1 class="page-title"><?php echo str_replace('Category: ','',get_the_archive_title()); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php

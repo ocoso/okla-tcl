@@ -8,7 +8,7 @@ Error: Undefined variable: "$theme-font-base".
 24:     margin-bottom: .45em;
 25:     text-align: center;
 26:     font-family: $theme-font-base;
-27:     color: $theme-type-1;
+27:     color: darken($theme-type-3,20%);
 28:   }
 29: }
 30: 
@@ -78,4 +78,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$theme-font-base\".\A         on line 26 of /src/components/sidebar.scss\A \A 21:     padding-top: 0px;\A 22:   }\A 23:   .widget-title {\A 24:     margin-bottom: .45em;\A 25:     text-align: center;\A 26:     font-family: $theme-font-base;\A 27:     color: $theme-type-1;\A 28:   }\A 29: }\A 30: \A 31: .widget_text {"; }
+  content: "Error: Undefined variable: \"$theme-font-base\".\A         on line 26 of /src/components/sidebar.scss\A \A 21:     padding-top: 0px;\A 22:   }\A 23:   .widget-title {\A 24:     margin-bottom: .45em;\A 25:     text-align: center;\A 26:     font-family: $theme-font-base;\A 27:     color: darken($theme-type-3,20%);\A 28:   }\A 29: }\A 30: \A 31: .widget_text {"; }

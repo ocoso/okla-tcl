@@ -24,20 +24,32 @@
     margin-bottom: .45em;
     text-align: center;
     font-family: $theme-font-base;
-    color: $theme-type-1;
+    color: darken($theme-type-3,20%);
   }
 }
 
 .widget_text {
   .textwidget {
-    color: $theme-type-2;
+    color: darken($theme-type-3,10%);
     text-align: center;
+    font-size: 1rem;
   }
 }
 
 #text-2 .textwidget {
   text-align: justify;
 }
+
+/**
+ * MC Sign-up form
+ */
+
+#mc_embed_signup div.mce_inline_error {
+  background: #fff !important;
+  color: $theme-type-1 !important;
+  font-weight: normal !important;
+}
+
 
 
 // Media queries
@@ -62,17 +74,13 @@
   .sidebar {
     //testing background: lighten(blue, 45%);
     background: #fff;
-    padding-top: 0;
+    padding-top: 0em;
     margin-bottom: 5.25em;
     border-top-width: 0;
   }
   .widget {
     margin-bottom: 1.5em;
-    font-size: 1rem;
-    font-size: 16px;
     .widget-title {
-      font-size: .875rem;
-      font-size: 14px;
     }
   }
 }

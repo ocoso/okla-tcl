@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$theme-type-3".
-        on line 76 of /src/components/header.scss
+        on line 88 of /src/components/header.scss
 
-71:   .site-header {
-72:     padding-right: 4.5455% !important;
-73:     padding-left: 4.5455% !important;
-74:   }
-75:   .site-header-menu {
-76:     border-bottom: 0px solid $theme-type-3;
-77:   }
-78:   .site-branding-svg {
-79:     min-width: 96px !important;
-80:     min-height: auto !important;
-81:     max-width: 96px !important;
+83:   .site-header {
+84:     padding-right: 4.5455% !important;
+85:     padding-left: 4.5455% !important;
+86:   }
+87:   .site-header-menu {
+88:     border-bottom: 0px solid $theme-type-3;
+89:   }
+90:   .site-branding-svg, .tcllogo-cutout, .tcllogo-wheel {
+91:     min-width: 96px !important;
+92:     min-height: auto !important;
+93:     max-width: 96px !important;
 
 Backtrace:
-/src/components/header.scss:76
+/src/components/header.scss:88
 /usr/local/bundle/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/bundle/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
 /usr/local/bundle/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -85,4 +85,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$theme-type-3\".\A         on line 76 of /src/components/header.scss\A \A 71:   .site-header {\A 72:     padding-right: 4.5455% !important;\A 73:     padding-left: 4.5455% !important;\A 74:   }\A 75:   .site-header-menu {\A 76:     border-bottom: 0px solid $theme-type-3;\A 77:   }\A 78:   .site-branding-svg {\A 79:     min-width: 96px !important;\A 80:     min-height: auto !important;\A 81:     max-width: 96px !important;"; }
+  content: "Error: Undefined variable: \"$theme-type-3\".\A         on line 88 of /src/components/header.scss\A \A 83:   .site-header {\A 84:     padding-right: 4.5455% !important;\A 85:     padding-left: 4.5455% !important;\A 86:   }\A 87:   .site-header-menu {\A 88:     border-bottom: 0px solid $theme-type-3;\A 89:   }\A 90:   .site-branding-svg, .tcllogo-cutout, .tcllogo-wheel {\A 91:     min-width: 96px !important;\A 92:     min-height: auto !important;\A 93:     max-width: 96px !important;"; }

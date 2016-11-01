@@ -28,20 +28,36 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php if ( is_front_page() && is_home() ) : ?>
-					<div class="entry-content">
-						<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-							<feature>
-								<div class="feature-image">
-									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-								</div>
-								<div class="feature-content">
-									<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h2>
-									<span class="excerpt"><?php the_excerpt(); ?></span>
-									<span class="category"><?php the_category(); ?></span>
-								</div>
-							</feature>
-	 					<?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>
-					</div>
+				<?php query_posts('posts_per_page=3'); ?>
+				<div class="entry-content features-wrapper">
+					<?php while (have_posts()) : the_post(); ?>
+						<feature>
+							<div class="feature-image">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('featured'); ?></a>
+							</div>
+							<div class="feature-content">
+								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h2>
+								<span class="excerpt"><?php the_excerpt(10); ?></span>
+								<span class="category"><?php the_category(); ?></span>
+							</div>
+						</feature>
+ 					<?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>
+				</div>
+				<?php query_posts('posts_per_page=3&offset=3'); ?>
+				<div class="entry-content features-wrapper">
+					<?php while (have_posts()) : the_post(); ?>
+						<div class="feature-alm">
+							<div class="feature-image">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('featured'); ?></a>
+							</div>
+							<div class="feature-content">
+								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h2>
+								<span class="excerpt"><?php the_excerpt(10); ?></span>
+								<span class="category"><?php the_category(); ?></span>
+							</div>
+						</div>
+ 					<?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>
+				</div>
 			<?php endif; ?>
 
 			<?php
@@ -72,7 +88,11 @@ get_header(); ?>
 		endif;
 		?>
 
+		<div class="entry-content features-wrapper">
+			<?php echo do_shortcode('[ajax_load_more post_type="post" offset="6" posts_per_page="3" pause="true" scroll="true" transition="fade" transition_container="true" button_label="Load More"]') ?>
+		</div>
 		</main><!-- .site-main -->
+
 	</div><!-- .content-area -->
 
 <?php get_sidebar(); ?>
