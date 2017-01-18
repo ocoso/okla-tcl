@@ -6,9 +6,9 @@
 // Main navigation
 .site-header-menu {
   display: block;
-  margin: .25em 0;
+  margin: 0 0;
   position: relative;
-  left: -200px;
+  left: -100%;
   width: 0%;
   transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease 0s;
@@ -44,6 +44,7 @@
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
   font-size: $theme-type-size-base;
+  text-align: left;
   color: $theme-nav-1;
   outline: 0;
 }
@@ -64,7 +65,7 @@
 // Menu toggle
 .menu-toggle {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   left: 7.6923%;
   display: block;
   text-transform: lowercase;

@@ -630,7 +630,8 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
   position: fixed;
   top: 0;
   width: 100%;
-  max-height: 95.88px;
+  height: 90px;
+  max-height: 90px;
   display: block;
   background: #fff;
   z-index: 99;
@@ -638,31 +639,18 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
   box-shadow: 0px 0 50px -20px #999; }
 
 .site-header {
-  padding: 0.8125em 0;
-  padding-left: 0; }
+  padding: 0 0;
+  padding-left: 0;
+  text-align: center; }
 
 .site-branding {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0; }
-  .site-branding .site-title, .site-branding .site-description {
-    display: none; }
-  .site-branding .site-branding-svg, .site-branding .tcllogo-cutout, .site-branding .tcllogo-wheel {
-    min-width: 88px;
-    min-height: auto;
-    max-width: 88px;
-    max-height: auto; }
-    .site-branding .site-branding-svg a, .site-branding .tcllogo-cutout a, .site-branding .tcllogo-wheel a {
-      display: block;
-      line-height: 0; }
-    .site-branding .site-branding-svg svg .st0, .site-branding .tcllogo-cutout svg .st0, .site-branding .tcllogo-wheel svg .st0 {
-      fill: #4D3C2B; }
-    .site-branding .site-branding-svg .tcllogo-cutout, .site-branding .tcllogo-cutout .tcllogo-cutout, .site-branding .tcllogo-wheel .tcllogo-cutout {
-      z-index: 99; }
-    .site-branding .site-branding-svg .tcllogo-wheel, .site-branding .tcllogo-cutout .tcllogo-wheel, .site-branding .tcllogo-wheel .tcllogo-wheel {
-      z-index: 98;
-      clear: both; }
+  margin: 0 auto;
+  width: 90px; }
+  .site-branding a {
+    display: block; }
+    .site-branding a h1 {
+      height: 90px;
+      padding: 10px; }
 
 @-ms-viewport {
   width: device-width; }
@@ -677,24 +665,8 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
     max-height: none;
     margin-bottom: 3em;
     -webkit-box-shadow: 0px 50px 60px -70px #999;
-    box-shadow: 0px 50px 60px -70px #999; }
-
-  .site-header {
-    padding-right: 4.5455% !important;
-    padding-left: 4.5455% !important; }
-
-  .site-header-menu {
-    border-bottom: 0px solid #a2a2a2; }
-
-  .site-branding-svg, .tcllogo-cutout, .tcllogo-wheel {
-    min-width: 96px !important;
-    min-height: auto !important;
-    max-width: 96px !important;
-    max-height: auto !important; } }
+    box-shadow: 0px 50px 60px -70px #999; } }
 /* 14.4 - >= 985px */
-@media screen and (min-width: 61.5625em) {
-  .site-header {
-    padding: 0.8125em 4.5455%; } }
 /* 14.5 - >= 1200px */
 /*
   Name: Navigation
@@ -702,9 +674,9 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
 */
 .site-header-menu {
   display: block;
-  margin: .25em 0;
+  margin: 0 0;
   position: relative;
-  left: -200px;
+  left: -100%;
   width: 0%;
   transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease 0s;
@@ -738,6 +710,7 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
   font-size: 1rem;
+  text-align: left;
   color: #4D3C2B;
   outline: 0; }
 
@@ -753,7 +726,7 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
 
 .menu-toggle {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   left: 7.6923%;
   display: block;
   text-transform: lowercase;
@@ -878,7 +851,7 @@ a.btn-social:hover, a.btn-social:active, a.btn-social:focus {
   Description: ...
 */
 .site-content {
-  margin-top: 95.88px;
+  margin-top: 90px;
   padding-top: 0em; }
 
 feature {
@@ -979,6 +952,9 @@ feature {
     feature:nth-child(2) .feature-content .excerpt, feature:nth-child(3) .feature-content .excerpt {
       font-size: 1rem;
       line-height: 1.5; }
+
+#main .entry-content {
+  padding-bottom: 2rem; }
 
 article .entry-header .entry-title {
   font-size: 1.5rem;

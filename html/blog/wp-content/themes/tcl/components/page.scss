@@ -3,7 +3,7 @@
   Description: ...
 */
 .site-content {
-  margin-top: 95.88px;
+  margin-top: 90px;
   padding-top: 0em;
 }
 feature {
@@ -144,6 +144,13 @@ feature {
     }
   }
 } // end feature
+
+// Main
+#main {
+  .entry-content {
+    padding-bottom: 2rem;
+  }
+}
 
 article {
   .entry-header {

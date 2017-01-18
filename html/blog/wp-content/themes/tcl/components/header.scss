@@ -6,7 +6,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  max-height: 95.88px;
+  height: 90px;
+  max-height: 90px;
   display: block;
   background: #fff;
   z-index: 99;
@@ -14,42 +15,20 @@
   box-shadow: 0px 0 50px -20px #999;
 }
 .site-header {
-  padding: 0.8125em 0;
+  padding: 0 0;
   padding-left: 0;
+  text-align: center;
 }
 
 // Branding
 .site-branding {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  // Hide title & description
-  .site-title, .site-description {
-    display: none;
-  }
-  // Logo
-  .site-branding-svg, .tcllogo-cutout, .tcllogo-wheel {
-    min-width: 88px;
-    min-height: auto;
-    max-width: 88px;
-    max-height: auto;
-    a {
-      display: block;
-      line-height: 0;
-    }
-    svg .st0 {
-      fill: #4D3C2B;
-    }
-    .tcllogo-cutout, .tcllogo-wheel {
-      //position: absolute;
-    }
-    .tcllogo-cutout {
-      z-index: 99;
-    }
-    .tcllogo-wheel {
-      z-index: 98;
-      clear: both;
+  margin: 0 auto;
+  width: 90px;
+  a {
+    display: block;
+    h1 {
+      height: 90px;
+      padding: 10px;
     }
   }
 }
@@ -80,26 +59,10 @@
     -webkit-box-shadow: 0px 50px 60px -70px #999;
     box-shadow: 0px 50px 60px -70px #999;
   }
-  .site-header {
-    padding-right: 4.5455% !important;
-    padding-left: 4.5455% !important;
-  }
-  .site-header-menu {
-    border-bottom: 0px solid $theme-type-3;
-  }
-  .site-branding-svg, .tcllogo-cutout, .tcllogo-wheel {
-    min-width: 96px !important;
-    min-height: auto !important;
-    max-width: 96px !important;
-    max-height: auto !important;
-  }
 }
 /* 14.4 - >= 985px */
 @media screen and (min-width: 61.5625em) {
   #masthead {
-  }
-  .site-header {
-    padding: 0.8125em 4.5455%;
   }
 }
 /* 14.5 - >= 1200px */

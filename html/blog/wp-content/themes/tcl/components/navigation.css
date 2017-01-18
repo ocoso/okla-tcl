@@ -11,8 +11,8 @@ Error: Undefined variable: "$theme-font-base".
 44:   -webkit-font-smoothing: antialiased;
 45:   font-weight: normal;
 46:   font-size: $theme-type-size-base;
-47:   color: $theme-nav-1;
-48:   outline: 0;
+47:   text-align: left;
+48:   color: $theme-nav-1;
 
 Backtrace:
 /src/components/navigation.scss:43
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$theme-font-base\".\A         on line 43 of /src/components/navigation.scss\A \A 38:   &:last-child {\A 39:     border-bottom-width: 0px;\A 40:   }\A 41: }\A 42: .main-navigation li > a {\A 43:   font-family: $theme-font-base;\A 44:   -webkit-font-smoothing: antialiased;\A 45:   font-weight: normal;\A 46:   font-size: $theme-type-size-base;\A 47:   color: $theme-nav-1;\A 48:   outline: 0;"; }
+  content: "Error: Undefined variable: \"$theme-font-base\".\A         on line 43 of /src/components/navigation.scss\A \A 38:   &:last-child {\A 39:     border-bottom-width: 0px;\A 40:   }\A 41: }\A 42: .main-navigation li > a {\A 43:   font-family: $theme-font-base;\A 44:   -webkit-font-smoothing: antialiased;\A 45:   font-weight: normal;\A 46:   font-size: $theme-type-size-base;\A 47:   text-align: left;\A 48:   color: $theme-nav-1;"; }
